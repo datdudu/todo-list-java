@@ -44,7 +44,7 @@ mvn test
 
 5. A aplicação com a documentação no swagger estará disponível em `http://localhost:8080/swagger-ui/index.html`.
 - Documentação feita no swagger
-- Para acessar a documentação em Markdown e os Endpoints clique aqui.
+- Para acessar a documentação em Markdown e os Endpoints [clique aqui](https://github.com/datdudu/todo-list-java/blob/main/Documentation.md).
 
 6. Para fazer requisições use `http://localhost:8080/api/v1/{resource}`
 
