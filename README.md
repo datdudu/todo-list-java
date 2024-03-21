@@ -42,11 +42,12 @@ mvn clean install
 mvn test
 ```
 
-5. A aplicação estará disponível em `http://localhost:8080`.
-
-6. Para acessar a documentação acesse `http://localhost:8080/swagger-ui/index.html`
+5. A aplicação com a documentação no swagger estará disponível em `http://localhost:8080/swagger-ui/index.html`.
 - Documentação feita no swagger
 - Para acessar a documentação em Markdown e os Endpoints clique aqui.
+
+6. Para fazer requisições use `http://localhost:8080/api/v1/{resource}`
+
 
 ## Funcionalidades
 
