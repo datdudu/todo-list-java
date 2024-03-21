@@ -31,6 +31,10 @@ public class TaskService {
     }
 
     public ResponseEntity<Task> updateTaskById(Task task, Long id){
+        if (task == null) {
+            return ResponseEntity.badRequest().build(); // Retorna BAD_REQUEST se a entrada for inválida
+        }
+
         return taskRepository.findById(id)
                 .map(taskToUpdate ->{
                     taskToUpdate.setTitle(task.getTitle());
@@ -38,7 +42,8 @@ public class TaskService {
                     taskToUpdate.setDeadline(task.getDeadline());
                     Task updated = taskRepository.save(taskToUpdate);
                     return ResponseEntity.ok().body(updated);
-                }).orElse(ResponseEntity.notFound().build());
+                })
+                .orElse(ResponseEntity.notFound().build());
     }
 
     public ResponseEntity<Object> deleteById(Long id){

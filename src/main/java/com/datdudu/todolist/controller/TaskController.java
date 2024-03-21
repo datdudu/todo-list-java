@@ -36,7 +36,6 @@ public class TaskController {
     @PostMapping("/tasks")
     @ResponseStatus(HttpStatus.CREATED)
     public Task createTask(@RequestBody Task task) {
-        log.info("Criando uma Task com essas informações [{}]", task);
         return taskService.createTask(task);
     }
 
@@ -50,8 +49,6 @@ public class TaskController {
     @GetMapping("tasks")
     @ResponseStatus(HttpStatus.OK)
     public List<Task> getAllTasks(){
-        log.info("Listando todas as Tasks");
-
         return taskService.listAllTasks();
     }
 
@@ -65,7 +62,6 @@ public class TaskController {
     @GetMapping("tasks/{id}")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Task> getTaskByid(@PathVariable (value = "id") Long id) {
-        log.info("Buscando com o id [{}]", id);
         return taskService.findTaskById(id);
     }
 
@@ -81,7 +77,6 @@ public class TaskController {
     @PutMapping("tasks/{id}")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Task> updateTaskById(@PathVariable (value = "id") Long id, @RequestBody Task task) {
-        log.info("Atualizando a task com o id [{}] e informações novas [{}]", id, task);
         return taskService.updateTaskById(task,id);
     }
 
@@ -93,7 +88,6 @@ public class TaskController {
     @DeleteMapping("tasks/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public ResponseEntity<Object> deleteTaskById(@PathVariable (value = "id") Long id) {
-        log.info("Deletando com o id [{}]", id);
         return taskService.deleteById(id);
     }
 }
