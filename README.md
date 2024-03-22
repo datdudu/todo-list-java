@@ -53,7 +53,7 @@ mvn test
 
 - Adicionar uma nova tarefa
 - Visualizar todas as tarefas
-- Marcar uma tarefa como concluída
+- Atualizar uma tarefa
 - Remover uma tarefa
 
 ## Tecnologias Utilizadas
